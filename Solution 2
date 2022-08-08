@@ -1,0 +1,39 @@
+{
+
+public static void main(String[] args) throws Exception {
+    Scanner scn = new Scanner(System.in);
+    int n= scn.nextInt();
+    int[] a=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        a[i]= scn.nextInt();
+    }
+    for(int k=0;k<a.length;k++)
+    {
+        for(int j=k;j<a.length;j++)
+        {
+          for(int i=1;i<=a.length-j;i++)
+           {
+             int[] b= new int[i];
+             for(int l=0;l<i;l++)
+                {
+                   for(int t=0;t<=l;t++)
+                    {
+                      b[l]=a[j+t];  
+                    }
+                }
+             StringBuilder sb = new StringBuilder();
+             for(int val: b)
+                {
+                 sb.append(val + " ");
+                }
+             System.out.println(sb);
+             if (b[0]==a[a.length-1])
+             {
+                 System.exit(0);
+             }
+            }
+        }    
+    }
+}
+}
